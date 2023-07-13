@@ -15,7 +15,21 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemPink
-        fetchBusinesses(keyWord: "asian", location: "San+Diego")
+//        fetchBusinesses(keyWord: "asian", location: "San+Diego")
+        fetchSpecificBusiness()
+    }
+    
+    func fetchSpecificBusiness() {
+        print("FORMOOSA1")
+        Task {
+            do {
+                let businessQuery = try await NetworkManager.shared.getBusiness(businessID: "OyB0Kn1JBRBNgWVGS8CwTA")
+                print(businessQuery)
+            } catch {
+                print("ERRORERROR")
+            }
+        }
+        print("FORMOOSA9")
     }
     
     func fetchBusinesses(keyWord: String, location: String) {
