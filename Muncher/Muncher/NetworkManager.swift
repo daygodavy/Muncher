@@ -11,7 +11,7 @@ import UIKit
 class NetworkManager {
     
     static let shared = NetworkManager()
-    private let apiKey = "iN7Vj9sHTGRTBngINx7cy46G1OYnNtLUg5-BqjKOB0aeYKCocwRDU7aX4bz1L3aw_cKRAw-l7cEMM_Utfj0Q7I4tc2Tzh9tO-NJtyamNmGB3gpEhoV0SbubjwjmnZHYx"
+    private let apiKey = Keys.yelpAPIKey
     private let baseURL = "https://api.yelp.com/v3/businesses/"
     private let location = "location=San+Diego"
     private let limit = "limit=5"
