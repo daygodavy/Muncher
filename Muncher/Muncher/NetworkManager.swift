@@ -28,36 +28,44 @@ class NetworkManager {
     
     
     func getBusinesses(keyWord: String, location: String) async throws -> YelpResponse {
+        
         let searchURL = "\(baseURL)search?term=\(keyWord)&location=\(location)&\(limit)"
-        guard let url = URL(string: searchURL) else { throw fatalError() }
+        
+        guard let url = URL(string: searchURL) else { throw Errors.invalidSearch }
         
         var request = URLRequest(url: url)
         request.setValue(header, forHTTPHeaderField: "Authorization")
         
-        let (data, _) = try await URLSession.shared.data(for: request)
+        let (data, response) = try await URLSession.shared.data(for: request)
+        
+        guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
+            throw Errors.invalidResponse
+        }
         
         do {
             return try decoder.decode(YelpResponse.self, from: data)
         } catch {
-            throw error
+            throw Errors.invalidData
         }
     }
     
     func getBusiness(businessID: String) async throws -> BusinessDetailed {
         let searchURL = "\(baseURL)\(businessID)"
-        guard let url = URL(string: searchURL) else { throw fatalError() }
+        guard let url = URL(string: searchURL) else { throw Errors.invalidSearch }
         
         var request = URLRequest(url: url)
         request.setValue(header, forHTTPHeaderField: "Authorization")
         
-        let (data, _) = try await URLSession.shared.data(for: request)
+        let (data, response) = try await URLSession.shared.data(for: request)
         
-//        let json = try JSONSerialization.jsonObject(with: data)
-//        print(json)
+        guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
+            throw Errors.invalidResponse
+        }
+        
         do {
             return try decoder.decode(BusinessDetailed.self, from: data)
         } catch {
-            throw error
+            throw Errors.invalidData
         }
         
     }

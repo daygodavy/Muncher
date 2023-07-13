@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5B920A592A60B25900464A8C /* BusinessDetailed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B920A582A60B25900464A8C /* BusinessDetailed.swift */; };
 		5B920A5D2A60BCF100464A8C /* SecretKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B920A5C2A60BCF100464A8C /* SecretKeys.swift */; };
+		5B920A5F2A60C24B00464A8C /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B920A5E2A60C24B00464A8C /* Errors.swift */; };
 		5BBC3E362A576DB000B4422D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBC3E352A576DB000B4422D /* AppDelegate.swift */; };
 		5BBC3E382A576DB000B4422D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBC3E372A576DB000B4422D /* SceneDelegate.swift */; };
 		5BBC3E3A2A576DB000B4422D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBC3E392A576DB000B4422D /* ViewController.swift */; };
@@ -41,6 +42,7 @@
 /* Begin PBXFileReference section */
 		5B920A582A60B25900464A8C /* BusinessDetailed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessDetailed.swift; sourceTree = "<group>"; };
 		5B920A5C2A60BCF100464A8C /* SecretKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecretKeys.swift; sourceTree = "<group>"; };
+		5B920A5E2A60C24B00464A8C /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		5BBC3E322A576DB000B4422D /* Muncher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Muncher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BBC3E352A576DB000B4422D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5BBC3E372A576DB000B4422D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 				5BBC3E682A57B9C200B4422D /* NetworkManager.swift */,
 				5B920A582A60B25900464A8C /* BusinessDetailed.swift */,
 				5B920A5C2A60BCF100464A8C /* SecretKeys.swift */,
+				5B920A5E2A60C24B00464A8C /* Errors.swift */,
 			);
 			path = Muncher;
 			sourceTree = "<group>";
@@ -293,6 +296,7 @@
 				5BBC3E672A5788E500B4422D /* Business.swift in Sources */,
 				5BBC3E692A57B9C200B4422D /* NetworkManager.swift in Sources */,
 				5B920A592A60B25900464A8C /* BusinessDetailed.swift in Sources */,
+				5B920A5F2A60C24B00464A8C /* Errors.swift in Sources */,
 				5BBC3E362A576DB000B4422D /* AppDelegate.swift in Sources */,
 				5B920A5D2A60BCF100464A8C /* SecretKeys.swift in Sources */,
 				5BBC3E382A576DB000B4422D /* SceneDelegate.swift in Sources */,
